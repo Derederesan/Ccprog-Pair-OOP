@@ -10,7 +10,6 @@ public class Contestant
          country = c; 
          age = a; 
          talents = new String[3];
-         age = 18;
     }
     public Contestant(String n, String c)
     {
