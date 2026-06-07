@@ -1,6 +1,5 @@
 /*
      @author Alexie Ilagan 
-     @author Aki Nicole Cartago 
 */
 public class Contestant
 {
