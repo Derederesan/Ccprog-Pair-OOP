@@ -92,7 +92,7 @@ public class Contestant
     public String toString()
     {
           //returns concatenation of name, country and age  
-         return name + " " + country + " " + age; 
+         return name + ", " + country + ", " + age; 
     }
     private String name; 
     private String country; 
