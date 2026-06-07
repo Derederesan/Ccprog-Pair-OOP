@@ -9,14 +9,16 @@ public class Contestant
          name= n; 
          country = c; 
          age = a; 
-         talents = new String[2];
+         talents = new String[3];
+         age = 18;
     }
     public Contestant(String n, String c)
     {
           //initializes name and country 
          name= n; 
          country = c; 
-         talents = new String[2];
+         talents = new String[3];
+         age = 18;
     }
     public String getName()
     {
