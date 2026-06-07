@@ -1,8 +1,6 @@
 /*
-
      @author Alexie Ilagan 
      @author Aki Nicole Cartago 
-
 */
 public class Contestant
 {
@@ -33,16 +31,24 @@ public class Contestant
     {
          //if array is not fully filled(at least 1 string not initialized)
           //add parameter to list 
-         
+         int y; 
+         for(y=0; y<talents.length; y++)
+          {
+               if(talents[y]!=null)
+               {
+                    talents[y]=t; 
+               }
+          }
     }
     public boolean canCompete(String t)
     {
           //checks if parameter matches defined talents of participant 
          int y; 
          boolean value; 
+         value=false; 
          for(y=0; y<talents.length; y++)
           {
-               if(t[y]==talents[y])
+               if(t[y].equals(talents[y]))
                {
                     value=true; 
                }
@@ -53,7 +59,20 @@ public class Contestant
     {
           //true if matches defined talents of participant 
               //also if participant is at most maxAge 
-         
+         int y; 
+         boolean value; 
+         value=false; 
+         for(y=0; y<talents.length;y++)
+          {
+               if(talents[y].equals(t))
+               {
+                    if(age==maxAge)
+                    {
+                         value=true;
+                    }
+               }
+          }
+         return value; 
     }
     public boolean canCompete(int minAge)
     {
