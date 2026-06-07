@@ -8,7 +8,6 @@ public static void main(String[] args)
 {
 //stores result of qualification checking
 
-```
     boolean qualified;
 
     //checks if contestant has singing talent
