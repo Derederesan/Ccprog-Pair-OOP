@@ -3,7 +3,7 @@ public class Pageant
 {
     public static void main(String[] args)
     {
-        Scanner sc= new Scanner(); 
+        Scanner sc = new Scanner(System.in);
         int y, tempAge,a; 
         String tempName, tempCountry; 
         //declare 5 contestant objects
@@ -15,7 +15,7 @@ public class Pageant
             tempName= sc.nextLine();
             System.out.println("Input contestant country: "); 
             tempCountry= sc.nextLine();
-            System.out.println("Input contestant name: "); 
+            System.out.println("Input contestant age: "); 
             tempAge=sc.nextInt(); 
             sc.nextLine(); 
             queens[y]= new Contestant(tempName,tempCountry,tempAge); 
