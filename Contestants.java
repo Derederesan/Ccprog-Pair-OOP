@@ -33,8 +33,9 @@ public class Contestant
     {
          //if array is not fully filled(at least 1 string not initialized)
           //add parameter to list 
-         int y,check;
-         check=0; 
+         
+         int y;
+         boolean check = false;
          for(y=0; y<talents.length; y++)
           {
                if(talents[y]==null && check==0)
