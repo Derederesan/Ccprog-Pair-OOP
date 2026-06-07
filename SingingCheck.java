@@ -1,16 +1,25 @@
 /*
-    @author Aki Nicole
+@author Aki Nicole
 */
 
 public class SingingCheck
 {
-    public static void main(String[] args)
-    {
-        boolean qualified;
+public static void main(String[] args)
+{
+//stores result of qualification checking
 
-        qualified = queens[0].canCompete("singing")
-                    && queens[0].canCompete(25);
+```
+    boolean qualified;
 
-        System.out.println(qualified);
-    }
+    //checks if contestant has singing talent
+    //and is at least 25 years old
+
+    qualified = queens[0].canCompete("singing")
+                && queens[0].canCompete(25);
+
+    //displays result of checking
+
+    System.out.println(qualified);
+}
+
 }
