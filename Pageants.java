@@ -26,7 +26,7 @@ public class Pageant
         //display result of checking 
             //true only if first contestant is at least 25 years old 
         //array and scanner clean up 
-        sc.close; 
+        sc.close(); 
         queens=null; 
     }
 }
