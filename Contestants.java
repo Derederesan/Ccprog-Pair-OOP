@@ -36,14 +36,15 @@ public class Contestant
          
          int y;
          boolean check = false;
+         
          for(y=0; y<talents.length; y++)
-          {
-               if(talents[y]==null && check==0)
-               {
-                    talents[y]=t; 
-                    check=1; 
-               }
-          }
+         {
+              if(talents[y]==null && !check)
+              {
+                   talents[y]=t;
+                   check=true;
+              }
+         }
     }
     public boolean canCompete(String t)
     {
