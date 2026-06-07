@@ -10,7 +10,6 @@ public static void main(String[] args)
 {
 Scanner sc = new Scanner(System.in);
 
-```
     //stores talents entered by the user
 
     String talent1, talent2;
