@@ -34,16 +34,16 @@ public class Contestant
          //if array is not fully filled(at least 1 string not initialized)
           //add parameter to list 
          
-         int y;
-         boolean check = false;
+     int y;
+     boolean check = false;
          
          for(y=0; y<talents.length; y++)
          {
-              if(talents[y]==null && !check)
-              {
-                   talents[y]=t;
-                   check=true;
-              }
+             if(talents[y]==null && !check)
+             {
+                talents[y]=t;
+                check=true;
+             }
          }
     }
     public boolean canCompete(String t)
