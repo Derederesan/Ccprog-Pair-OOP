@@ -9,7 +9,7 @@ public class Contestant
           //initializes name, country and age 
          name= n; 
          country = c; 
-         a = age; 
+         age = a; 
     }
     public Contestant(String n, String c)
     {
@@ -31,12 +31,14 @@ public class Contestant
     {
          //if array is not fully filled(at least 1 string not initialized)
           //add parameter to list 
-         int y; 
+         int y,check;
+         check=0; 
          for(y=0; y<talents.length; y++)
           {
-               if(talents[y]!=null)
+               if(talents[y]==null && check==0)
                {
                     talents[y]=t; 
+                    check=1; 
                }
           }
     }
@@ -48,7 +50,7 @@ public class Contestant
          value=false; 
          for(y=0; y<talents.length; y++)
           {
-               if(t[y].equals(talents[y]))
+               if(talents[y] != null && talents[y].equals(t))
                {
                     value=true; 
                }
@@ -64,9 +66,9 @@ public class Contestant
          value=false; 
          for(y=0; y<talents.length;y++)
           {
-               if(talents[y].equals(t))
+               if(talents[y] != null && talents[y].equals(t))
                {
-                    if(age==maxAge)
+                    if(age<=maxAge)
                     {
                          value=true;
                     }
