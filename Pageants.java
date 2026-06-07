@@ -4,7 +4,7 @@ public class Pageant
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
-        int y, tempAge,a; 
+        int y, tempAge;
         String tempName, tempCountry; 
         //declare 5 contestant objects
         Contestant[] queens = new Contestant[5]; 
@@ -21,11 +21,29 @@ public class Pageant
             queens[y]= new Contestant(tempName,tempCountry,tempAge); 
             
         }
-        //ask user to input 2 talents-used for 1st contestant 
-        //check if user can compete in singing 
-        //display result of checking 
-            //true only if first contestant is at least 25 years old 
-        //array and scanner clean up 
+       //ask user to input 2 talents-used for 1st contestant
+        String talent1, talent2;
+        
+        System.out.print("Input talent 1: ");
+        talent1 = sc.nextLine();
+        
+        System.out.print("Input talent 2: ");
+        talent2 = sc.nextLine();
+        
+        queens[0].addTalent(talent1);
+        queens[0].addTalent(talent2);
+        
+        //check if first contestant can compete in singing
+        //display result of checking
+        //true only if first contestant is at least 25 years old
+        
+        boolean qualified;
+        
+        qualified = queens[0].canCompete("singing")
+            && queens[0].canCompete(25);
+        
+        System.out.println(qualified);
+        
         sc.close(); 
         queens=null; 
     }
