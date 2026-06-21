@@ -14,19 +14,14 @@ public class Room
               //Provide code 
 		int y;
 			//check if room isFull 
-			if(this.isFull()==true|| this.NUM<=0)
+			if(this.isFull()==true)
 			{
 				return false; 
 			}
-			else
-			{
-				for(y=0; y<this.length(); y++)
-				{
-					if(this.Person[y]!=null)
-						this.Person[y]=guest; 
-				}	
-				return true;
-			}
+
+		this.guest[size]=guest; 
+		this.size++; 
+		return true; 
 	}
 	
 	public boolean isFull()
