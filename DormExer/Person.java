@@ -1,27 +1,32 @@
 public class Person
 {
-private String name;
-private String nationality;
+    //person's name
+    private String name;
 
-public Person(String name, String nationality)
-{
-    this.name = name;
-    this.nationality = nationality;
-}
+    //person's nationality
+    private String nationality;
 
-public String getName()
-{
-    return name;
-}
+    public Person(String name, String nationality)
+    {
+        this.name = name;
+        this.nationality = nationality;
+    }
 
-public String getNationality()
-{
-    return nationality;
-}
+    //returns person's name
+    public String getName()
+    {
+        return name;
+    }
 
-public String toString()
-{
-    return name + " - " + nationality;
-}
+    //returns person's nationality
+    public String getNationality()
+    {
+        return nationality;
+    }
 
+    //displays person's information
+    public String toString()
+    {
+        return name + " - " + nationality;
+    }
 }
