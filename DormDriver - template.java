@@ -19,35 +19,37 @@ public class DormDriver
 	
 	public void displayDorms(Dormitory[] dorms)
 	{
-		int i;
-		for (i = 0; i < dorms.length; i++)
-		{
-			System.out.println("Dormitory: " + dorms[i].getName());
-			
-			Room[] rooms = dorms[i].getRooms();
-			
-			System.out.println("Total Rooms: " + rooms.length);
-			
-			int notFull = 0;
-			
-			for(int j = 0; j < rooms.length; j++)
-			{
-				if(!rooms[j].isFull())
-				{
-					notFull++;
-			}
-	}
-		System.out.println("Rooms not full: " + notFull);
-			
-		for(int j = 0; j < rooms.length; j++)
+	int i;
+
+    for(i = 0; i < dorms.length; i++)
+	{
+		System.out.println("Dormitory: " + dorms[i].getName());
 		
-		{
-			System.out.println("Room " + rooms[j].getRoomNum());
-			display(rooms[j]);
-	}
-			   
-		}
-	}
+		Room[] rooms = dorms[i].getRooms();
+
+        System.out.println("Total Rooms: " + rooms.length);
+
+       int notFull = 0;
+
+       for(int j = 0; j < rooms.length; j++)
+	   {
+		   if(!rooms[j].isFull()) 
+		   {
+			   notFull++;
+		   }
+	   }
+
+       System.out.println("Rooms not full: " + notFull);
+
+      for(int j = 0; j < rooms.length; j++)
+      {
+		  System.out.println("Room " + rooms[j].getRoomNum());
+          display(rooms[j]);
+      }
+}
+
+}
+
 	
 	
 	public static void main(String[] args)
@@ -70,14 +72,27 @@ public class DormDriver
 
 		DormDriver driver = new DormDriver();
 		
-		/* Have all Filipinos be in the same room, as
-		   long as they fit.  Following first come, first
-		   served, those who do not fit will be assigned 
-		   to the next room. Use the first dormitory for 
-		   the Filipinos.  For the other nationalities, 
-		   they will be assigned to the second dormitory in
-		   separate rooms. Provide your code.
-		*/
+		int filipinoRoom = 1;
+		int foreignRoom = 1;
+		
+		for(Person p : guests)
+     {
+        if("Filipino".equals(p.getNationality()))
+     {
+        if(!dorms[0].addGuest(filipinoRoom, p))
+     {
+        filipinoRoom++;
+        dorms[0].addGuest(filipinoRoom, p);
+     }
+  }
+        else
+  {
+        dorms[1].addGuest(foreignRoom, p);
+        foreignRoom++;
+     } 
+  }
+
+
 
 		
 		driver.displayDorms(dorms);
@@ -86,20 +101,17 @@ public class DormDriver
 		/* Provide code to transfer Ray to STC Dorm, and
 			he wants to be assigned to a currently unoccupied
 			room. */
-		
-		// TODO: Transfer Ray to STC Dorm
-		System.out.println("\n\nTransfering Ray");
-	
-		
+		System.out.println("\n\nTransferring Ray");
+			
 		
 		/* Provide code to transfer Michael to the same room 
 		   as Miguel */
-		System.out.println("\n\nTransfering Michael");   
+		System.out.println("\n\nTransferring Michael");   
 		
 	
-		
+	
 
-		// TODO: Transfer Michael to Miguel's room
+
 		driver.displayDorms(dorms);
 
 
