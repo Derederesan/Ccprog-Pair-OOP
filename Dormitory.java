@@ -8,7 +8,7 @@ public class Dormitory
     public boolean checkAddGuest(String name, String nationality, int roomNum)
     {
         //if capacity is full or invalid room number provided
-        if(
+        if(this.isFull()==true || )
         //else true 
     }
 
