@@ -12,21 +12,21 @@ public class Room
 	public boolean addGuest(Person guest)
 	{ 
               //Provide code 
-			int y; 
-			  //check if capacity is full 
-			if()
+		int y;
+			//check if room isFull 
+			if(this.isFull()==true|| this.NUM<=0)
 			{
-				for(y=0;y<6;y++)
-				{
-					
-				}
+				return false; 
 			}
 			else
 			{
-				for(y=0; y<6;y++)
+				for(y=0; y<this.length(); y++)
+				{
+					if(this.Person[y]!=null)
+						this.Person[y]=guest; 
+				}	
+				return true;
 			}
-			  //check for null
-			  //add guest to room 
 	}
 	
 	public boolean isFull()
