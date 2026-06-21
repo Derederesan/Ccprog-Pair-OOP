@@ -22,17 +22,29 @@ public class DormDriver
 		int i;
 		for (i = 0; i < dorms.length; i++)
 		{
-			/* display the name of the dorm, the total
-			   number of rooms, and the number of rooms
-			   that are not full yet */
+			System.out.println("Dormitory: " + dorms[i].getName());
 			
-			//display total number of rooms 
-			/* 
-			   Display all the names and nationalities
-			   of the guests in each room. Part of the 
-			   solution is to call the method display() 
-			   in DormDriver. Provide your code */
-		    
+			Room[] rooms = dorms[i].getRooms();
+			
+			System.out.println("Total Rooms: " + rooms.length);
+			
+			int notFull = 0;
+			
+			for(int j = 0; j < rooms.length; j++)
+			{
+				if(!rooms[j].isFull())
+				{
+					notFull++;
+			}
+	}
+		System.out.println("Rooms not full: " + notFull);
+			
+		for(int j = 0; j < rooms.length; j++)
+		
+		{
+			System.out.println("Room " + rooms[j].getRoomNum());
+			display(rooms[j]);
+	}
 			   
 		}
 	}
@@ -55,6 +67,8 @@ public class DormDriver
 		guests.add(new Person("Victor", "Filipino"));
 		guests.add(new Person("Dennis", "Filipino"));
 		guests.add(new Person("Jaime", "Filipino"));
+
+		DormDriver driver = new DormDriver();
 		
 		/* Have all Filipinos be in the same room, as
 		   long as they fit.  Following first come, first
@@ -66,15 +80,14 @@ public class DormDriver
 		*/
 
 		
-		
-		
-		/* Provide your code to call displayDorms() in
-		   class DormDriver. */
+		driver.displayDorms(dorms);
  		   
 
 		/* Provide code to transfer Ray to STC Dorm, and
 			he wants to be assigned to a currently unoccupied
 			room. */
+		
+		// TODO: Transfer Ray to STC Dorm
 		System.out.println("\n\nTransfering Ray");
 	
 		
@@ -86,8 +99,9 @@ public class DormDriver
 	
 		
 
-		/* Provide your code to call displayDorms() in
-		   class DormDriver. */
+		// TODO: Transfer Michael to Miguel's room
+		driver.displayDorms(dorms);
+
 
 
 		   
