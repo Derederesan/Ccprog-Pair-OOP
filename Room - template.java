@@ -32,6 +32,7 @@ public class Room
 	public boolean isFull()
 	{
               //Provide code 
+		return this.MAX==this.getMaxCapacity(); 
 	}
 	
 	public boolean isEmpty()
